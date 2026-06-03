@@ -14,7 +14,9 @@ export default function MiguelPage() {
         <p className="text-lime-600 text-lg">
           HOMEM DE LATA
         </p>
-
+        <p className="text-lime-600 text-lg">
+          ATENÇÃO: Todos os textos que estiverem na cor <span className="text-gray-700">cinza</span> foram adicionados meses depois da data orignal de criação deste site.
+        </p>
       </section>
 
 
@@ -31,7 +33,16 @@ export default function MiguelPage() {
           Foto do Miguel, provavelmente tirada por um fã. A imagem é de baixa qualidade, reforçando a aura que ele carrega.
         </p>
 
-      </section>masteryi.jpg
+        <img
+          src="/images/migred.jpg"
+          alt="miguel"
+          className="w-[350px]"
+        />
+        <p className="text-xs text-gray-700 mt-2">
+         Foto mais recente encontrada dele, provavelmente no inferno matando sua gang.
+        </p>
+
+      </section>
 
 
       {/* BIOGRAFIA */}
@@ -44,17 +55,21 @@ export default function MiguelPage() {
         <p className="mt-6 text-lg text-red-600 animate-jump">
           Miguel dos Santos Farias, tambem conhecido como: MIGW, charmes, migs, gueguel, homem de lata, Groud Master, Migwoke, magraum, zoio, costelinha, entre outros. Eh um cantor, compositor, desenvolvedor, programador, pro-player de diversos jogos online, guitarrista, estudante etc. que vem se destacando nos ultimos meses por suas incriveis habilidades no jogo eletronico 
           League of Legends com o personagem Kayn jogando na area da selva.
+          <span className="text-gray-700">Atualmente jogando no top de tahm kench e malphite.</span>
+          
         </p>
 
         <p className="mt-4 text-blue-600 animate-shake">
           Não existem registros consistentes sobre o início de sua atividade.
           Algumas fontes afirmam que sua música surgiu de forma espontânea,
           sem anúncio ou intenção clara.
+          <span className="text-gray-700">Nos dias atuais suas habilidades decairam um pouco no league of legends pela sua brusca mudanca de posicao e falta de atividade no jogo.</span>
         </p>
 
         <p className="mt-4 text-green-600">
           Seu comportamento online é inconsistente, alternando entre períodos
           de atividade intensa e completo desaparecimento.
+          <span className="text-gray-700">Por enquanto ele esta bem ativo em suas musicas no seu spotify, porem no league of legends esta desaparecido.</span>
         </p>
 
       </section>
