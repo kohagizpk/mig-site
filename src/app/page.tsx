@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NewLineKind } from "typescript";
 
 export default function MiguelPage() {
   return (
@@ -97,6 +98,9 @@ export default function MiguelPage() {
         <h2 className="text-4xl text-red-600 font-bold animate-spin-slow">
           polêmicas
         </h2>
+        <Link href="/passaro-feliz">
+          <img src="/images/bird3.png" className="h-2 w-2"/>
+        </Link>
 
         <div className="mt-8 space-y-10">
 
