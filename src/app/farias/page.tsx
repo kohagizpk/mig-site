@@ -22,7 +22,7 @@ export default function FariasPage() {
     // tenta autoplay imediato
     const tryPlay = () => {
       audio.play().catch(() => {teste()});
-      video?.play().catch(() => {});
+    video?.play().catch(() => undefined);
     };
 
     tryPlay();
@@ -33,7 +33,7 @@ export default function FariasPage() {
     // fallback: qualquer interação ativa
     const unlockAudio = () => {
       audio.play().catch(() => {teste()});
-      video?.play().catch(() => {});
+      video?.play().catch(() => undefined);
       window.removeEventListener("click", unlockAudio);
       window.removeEventListener("scroll", unlockAudio);
       window.removeEventListener("mousemove", unlockAudio);
