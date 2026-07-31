@@ -10,9 +10,11 @@ const creepster = Creepster({
 
 export default function FariasPage() {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const audio = audioRef.current;
+    const video = videoRef.current;
     if (!audio) return;
 
     audio.volume = 0.3;
@@ -20,6 +22,7 @@ export default function FariasPage() {
     // tenta autoplay imediato
     const tryPlay = () => {
       audio.play().catch(() => {teste()});
+      video?.play().catch(() => {});
     };
 
     tryPlay();
@@ -30,6 +33,7 @@ export default function FariasPage() {
     // fallback: qualquer interação ativa
     const unlockAudio = () => {
       audio.play().catch(() => {teste()});
+      video?.play().catch(() => {});
       window.removeEventListener("click", unlockAudio);
       window.removeEventListener("scroll", unlockAudio);
       window.removeEventListener("mousemove", unlockAudio);
@@ -105,6 +109,26 @@ export default function FariasPage() {
         <p className="text-3xl animate-pulse delay-500">
           mas algo permaneceu.
         </p>
+
+        <div className="h-40" />
+
+        {/* VIDEO */}
+        <div className="flex flex-col items-center space-y-4">
+          <p className="text-lg text-zinc-500 animate-pulse">
+            última gravação encontrada
+          </p>
+          <video
+            ref={videoRef}
+            className="w-full max-w-xl border border-red-900 shadow-[0_0_40px_rgba(220,38,38,0.3)]"
+            controls
+            loop
+            muted
+            playsInline
+            preload="auto"
+          >
+            <source src="/video/soystemd.mp4" type="video/mp4" />
+          </video>
+        </div>
 
         <div className="h-40" />
 
